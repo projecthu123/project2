@@ -1,0 +1,414 @@
+/********** Template CSS **********/
+:root {
+  --primary: #040610; /* #040610; or #181d38  or #011f4b */
+  --lighterprimary: #181d38;
+  --light: #f0fbfc;
+  --dark: #181d38;
+}
+
+.back-to-top {
+  position: fixed;
+  display: none;
+  right: 10px;
+  bottom: 45px;
+  z-index: 99;
+}
+
+/* Header styles */
+.image1 {
+  width: 70px;
+  padding-bottom: 6px;
+  padding-right: 4px;
+}
+
+.red {
+  color: red;
+}
+
+.user-image {
+  padding-right: 30px;
+}
+
+/* Navbar styles */
+
+.navbar-light .navbar-brand,
+.navbar-light a.btn {
+  height: 75px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: var(--dark);
+  font-weight: 500;
+}
+
+.user-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.user-dropdown-content a i {
+  margin-right: 0.5rem !important;
+}
+
+.user-dropdown-btn {
+  display: flex;
+  align-items: center;
+  background-color: var(--lighterprimary);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color var(--transition-speed) ease;
+}
+
+.user-dropdown-btn:hover {
+  background-color: #015080;
+}
+
+.user-dropdown-btn i {
+  margin-right: 10px;
+}
+
+.user-dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: white;
+  min-width: 200px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.user-dropdown:hover .user-dropdown-content {
+  display: block;
+  animation: dropdown-slide 0.3s ease;
+}
+
+.user-dropdown-content a {
+  color: var(--dark);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background-color var(--transition-speed) ease;
+}
+
+.user-dropdown-content a:hover {
+  background-color: var(--light);
+  color: var(--primary);
+}
+
+@keyframes dropdown-slide {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+  .user-dropdown-content {
+    position: static;
+    display: block;
+    box-shadow: none;
+    width: 100%;
+  }
+
+  .user-dropdown:hover .user-dropdown-content {
+    animation: none;
+  }
+}
+
+/* Page header background */
+.page-header {
+  background: linear-gradient(rgba(24, 29, 56, 0.7), rgba(24, 29, 56, 0.7)),
+    url(../img/collage.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.page-header-inner {
+  background: rgba(15, 23, 43, 0.7);
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  color: var(--light);
+}
+
+/* Courses section */
+.courses-section {
+  text-align: center;
+  padding: 70px;
+}
+.courses-section p,
+.submit-section input[type="submit"] {
+  font-family: "Candara Light";
+  margin-top: 5px;
+  font-size: 1.2em;
+}
+.table-container {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+table {
+  max-width: 1200px;
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+  margin: 40px;
+}
+table td {
+  padding: 20px;
+  border: 30px solid var(--primary);
+}
+.course-info {
+  margin-top: 10px;
+}
+.course-description {
+  color: #666;
+}
+img {
+  max-width: 100px;
+}
+.courses-section img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.courses-section {
+  padding: 4rem 5%;
+  background: #f4f6f7;
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.course-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  text-align: center;
+  height: 250px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+}
+
+.course-card img {
+  max-width: 120px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+  align-self: center;
+}
+
+.course-card img:hover {
+  transform: scale(1.1);
+}
+
+/* Button styling */
+.btn {
+  display: inline-block;
+  background-color: var(--lighterprimary);
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: auto;
+  transition: background-color 0.3s ease;
+  font-family: "Inter", sans-serif;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  background-color: white;
+}
+
+.course-card .btn {
+  transition: background-color 0.3s ease;
+}
+
+
+/* Slides and Book styling */
+.iframe-container {
+  width: 640px;
+  height: 480px;
+}
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.container {
+  margin-bottom: 60px;
+}
+
+/* API Integration Section Styles */
+.upload-form {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.upload-form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+  color: var(--primary);
+}
+.upload-form input[type="file"],
+.upload-form input[type="text"] {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 4px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.upload-form button {
+  background-color: var(--primary);
+  color: #ffffff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+.upload-form button:hover {
+  background-color: #0f4c81;
+}
+.response {
+  background: #f0f8ff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+/* Question Form Styles */
+.question-form {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.question-form input[type="text"] {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 4px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.question-form button {
+  background-color: var(--primary);
+  color: #ffffff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+.question-form button:hover {
+  background-color: #0f4c81;
+}
+.pdfchat-container,
+.grouppdfchat-container {
+  padding: 20px;
+  border: 1px solid #ccc;
+  height: 100%;
+}
+.pdfchat-container {
+  background-color: #f9f9f9;
+}
+.grouppdfchat-container {
+  background-color: #e9ecef;
+}
+.pdfchat-container h1,
+.grouppdfchat-container h1 {
+  text-align: center;
+}
+
+/* FOOTER */
+.footer {
+  background-color: var(--primary);
+  color: var(--light);
+  padding: 30px 0;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.social-icons .btn-social {
+  margin: 0 10px;
+  color: var(--light);
+  background-color: var(--primary);
+  border: 1px solid var(--light);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.social-icons .btn-social:hover {
+  color: var(--primary);
+  background-color: var(--light);
+}
+
+/* Footer Menu */
+.footer-menu {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  font-size: 15px;
+}
+.footer-menu a {
+  color: var(--light);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.footer-menu a:hover {
+  color: #ffffff;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Copyright Section */
+.copyright {
+  text-align: center;
+  font-size: 14px;
+  color: var(--light);
+}
+.copyright a {
+  color: var(--light);
+  text-decoration: none;
+  padding: 0 5px;
+}
+.copyright a:hover {
+  color: white;
+}
