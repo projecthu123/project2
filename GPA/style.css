@@ -1,0 +1,18 @@
+:root {
+    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.selector-for-some-widget {
+    box-sizing: content-box;
+}
+
+body {
+       font-family: "Nunito", sans-serif;
+}
+
+input, select {
+    text-align: center;
+}
+
+
+

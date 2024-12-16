@@ -1,0 +1,424 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="design/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@700&display=swap" rel="stylesheet">
+    <script src="design/js/bootstrap.bundle.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://kit.fontawesome.com/10d378ec27.js" crossorigin="anonymous"></script>
+    <meta charset="utf-8" />
+
+    <!-- Google Web Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+    <!-- Icon Font Stylesheet -->
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Template Stylesheet -->
+    <link href="css/coursesStyle.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>GPA Calculation</title>
+</head>
+
+<body>
+      <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+          <h2 class="m-0 text-primary">
+            <img class="image1" src="img/logo.png">
+            <span class="red">IT</span>BOOK
+          </h2>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav ms-auto p-4 p-lg-0">
+            <a href="index.html" class="nav-item nav-link active">Home</a>
+            <a href="#about" class="nav-item nav-link">About</a>
+            <a href="courses.html" class="nav-item nav-link">Courses</a>
+          </div>
+          <div class="user-dropdown">
+            <button class="user-dropdown-btn">
+              <i class="fas fa-user"></i>User </button>
+            <div class="user-dropdown-content">
+              <a href="#">
+                <i class="fas fa-book me-2"></i>My Courses </a>
+              <a href="#">
+                <i class="fas fa-heart me-2"></i>Favorites </a>
+              <a href="#">
+                <i class="fas fa-sign-out-alt me-2"></i>Log Out </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- Navbar End -->
+
+      <!-- Header Start -->
+      <div class="container-fluid bg-primary py-5 mb-5 page-header">
+        <div class="container py-5">
+          <div class="row justify-content-center">
+            <div class="col-lg-10 text-center">
+              <h1 class="display-3 text-white animated slideInDown"> GPA </h1>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb justify-content-center">
+                  <li class="breadcrumb-item">
+                    <a class="text-white" href="index.html">Home</a>
+                  </li>
+                  <li class="breadcrumb-item">
+                    <a class="text-white" href="#"></a>
+                  </li>
+                  <li class="breadcrumb-item">
+                    <a class="text-white" href="courses.html"></a>
+                  </li>
+                  <li class="breadcrumb-item text-white active" aria-current="page"> </li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Header End -->
+
+<div class="container mt-4">
+    <table class="table text-center" id="degreeTable">
+        <thead class="table-light">
+            <tr>
+                <th scope="col">رمز المادة السابق</th>
+                <th scope="col">مادة معادة</th>
+                <th scope="col">العلامة</th>
+                <th scope="col">الساعات المعتمدة</th>
+                <th scope="col">المادة</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <select class="form-control retaken-code" id="code-1" disabled>
+    <option value="" disabled selected>رمز المادة السابق</option>
+                        <option value="2.5">C+</option>
+                        <option value="2.25">C</option>
+                        <option value="2.0">C-</option>
+                        <option value="1.75">D+</option>
+                        <option value="1.5">D</option>
+                        <option value="0.0">F</option>
+                    </select>
+                </td>
+                <td>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input retaken-course" id="retaken-1" onchange="toggleRetakenFields(1)">
+                        <label class="form-check-label" for="retaken-1">معادة</label>
+                    </div>
+                </td>
+                <td>
+                    <select class="form-control grade" placeholder="العلامة">
+                        <option value="4.0">A+</option>
+                        <option value="3.75">A</option>
+                        <option value="3.5">A-</option>
+                        <option value="3.25">B+</option>
+                        <option value="3.0">B</option>
+                        <option value="2.75">B-</option>
+                        <option value="2.5">C+</option>
+                        <option value="2.25">C</option>
+                        <option value="2.0">C-</option>
+                        <option value="1.75">D+</option>
+                        <option value="1.5">D</option>
+                        <option value="0.0">F</option>
+                    </select>
+                </td>
+                <td><input type="number" class="form-control credit-hour" placeholder="عدد الساعات المعتمدة"></td>
+                <td><input type="text" class="form-control course-name" placeholder="المادة"></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="5" class="text-center">
+                    <button type="button" class="btn btn-primary" id="addCourse">أضف مادة جديدة</button>
+                    <button type="button" class="btn btn-secondary" onclick="calculateGPA()">إحسب</button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="5">
+                    <label for="total">المعدل الفصلي</label>
+                    <input type="text" class="form-control" id="total" disabled>
+                </td>
+            </tr>
+            <tr>
+                <th colspan="5">
+                    <div class="alert alert-dark text-center" role="alert" dir="auto">حساب المعدل التراكمي (اختياري)</div>
+                </th>
+            </tr>
+            <tr>
+                <td><input type="number" class="form-control" id="old_gpa" placeholder="المعدل التراكمي السابق"></td>
+                <td colspan="5"><input type="number" class="form-control" id="old_hour" placeholder="الساعات المقطوعة سابقًا"></td>
+            </tr>
+            <tr>
+                <td colspan="5" class="text-center">
+                    <button type="button" class="btn btn-secondary" onclick="calculateCumulativeGPA()">إحسب المعدل التراكمي</button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="5">
+                    <label for="gpatotal">المعدل التراكمي</label>
+                    <input type="text" class="form-control" id="gpatotal" disabled>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+<!-- Footer Section -->
+      <footer class="footer">
+        <div class="container">
+          <!-- Footer Menu -->
+          <div class="footer-menu">
+            <a href="#">Home</a>
+            <a href="#">Courses</a>
+            <a href="#">About Us</a>
+            <a href="#">Settings</a>
+          </div>
+          <!-- Social Media Icons -->
+          <div class="social-icons">
+            <a href="#" class="btn btn-social">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="btn btn-social">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#" class="btn btn-social">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+          <!-- Copyright Section -->
+          <div class="copyright text-center">
+            <p>&copy; 2024 ITBOOK. All Rights Reserved.</p>
+            <p>
+              <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+            </p>
+          </div>
+      </footer>
+      <!-- Back to Top -->
+      <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top">
+        <i class="fas fa-arrow-up"></i>
+      </a>
+
+
+    <script type="text/javascript">
+        // Toggle the visibility of the retaken course code field
+function toggleRetakenFields(rowNumber) {
+    const checkbox = document.getElementById(`retaken-${rowNumber}`);
+    const retakenCodeField = document.getElementById(`code-${rowNumber}`);
+    if (checkbox.checked) {
+        retakenCodeField.disabled = false;
+    } else {
+        retakenCodeField.disabled = true;
+        retakenCodeField.value = ''; // Clear the code when unchecked
+    }
+}
+
+
+        // GPA calculation function
+        function calculateGPA() {
+            const grades = document.querySelectorAll(".grade");
+            const creditHours = document.querySelectorAll(".credit-hour");
+            const retakenCourses = document.querySelectorAll(".retaken-course");
+            const retakenCodes = document.querySelectorAll(".retaken-code");
+            let totalPoints = 0;
+            let totalHours = 0;
+            let retakenSubjects = {};
+
+            grades.forEach((grade, index) => {
+                const courseName = document.querySelectorAll(".course-name")[index].value;
+                const hour = parseFloat(creditHours[index].value);
+                const gradeValue = parseFloat(grade.value);
+                const isRetaken = retakenCourses[index].checked;
+                const retakenCode = retakenCodes[index].value.trim();
+
+                if (!isNaN(gradeValue) && !isNaN(hour) && gradeValue >= 0 && hour >= 0) {
+                    // Handle retaken subjects
+                    if (isRetaken) {
+                        if (!retakenSubjects[retakenCode]) {
+                            retakenSubjects[retakenCode] = { grade: gradeValue, hours: hour };
+                        } else if (gradeValue > retakenSubjects[retakenCode].grade) {
+                            retakenSubjects[retakenCode] = { grade: gradeValue, hours: hour };
+                        }
+                    } else {
+                        totalPoints += gradeValue * hour;
+                        totalHours += hour;
+                    }
+                }
+            });
+
+            Object.values(retakenSubjects).forEach(subject => {
+                totalPoints += subject.grade * subject.hours;
+                totalHours += subject.hours;
+            });
+
+            const currentGPA = totalPoints / totalHours || 0;
+             // Add grade description
+    let gradeDescription = "";
+    if (currentGPA >= 3.5) {
+        gradeDescription = "ممتاز";
+    } else if (currentGPA >= 3.0) {
+        gradeDescription = "جيد جدا";
+    } else if (currentGPA >= 2.5) {
+        gradeDescription = "جيد";
+    } else {
+        gradeDescription = "مقبول";
+    }
+
+    // Display GPA and description
+    document.getElementById("total").value = `${currentGPA.toFixed(2)} (${gradeDescription})`;
+
+
+        }
+
+        // Add new course row
+document.getElementById('addCourse').addEventListener('click', function () {
+    const rowCount = document.querySelectorAll('#degreeTable tbody tr').length + 1;
+    const rowHTML = `
+        <tr>
+            <td>
+                <select class="form-control retaken-code" id="code-${rowCount}" disabled>
+                    <option value="" disabled selected>رمز المادة السابق</option>
+                    <option value="2.5">C+</option>
+                    <option value="2.25">C</option>
+                    <option value="2.0">C-</option>
+                    <option value="1.75">D+</option>
+                    <option value="1.5">D</option>
+                    <option value="0.0">F</option>
+                </select>
+            </td>
+            <td>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input retaken-course" id="retaken-${rowCount}" onchange="toggleRetakenFields(${rowCount})">
+                    <label class="form-check-label" for="retaken-${rowCount}">معادة</label>
+                </div>
+            </td>
+            <td>
+                <select class="form-control grade" placeholder="العلامة">
+                    <option value="4.0">A+</option>
+                    <option value="3.75">A</option>
+                    <option value="3.5">A-</option>
+                    <option value="3.25">B+</option>
+                    <option value="3.0">B</option>
+                    <option value="2.75">B-</option>
+                    <option value="2.5">C+</option>
+                    <option value="2.25">C</option>
+                    <option value="2.0">C-</option>
+                    <option value="1.75">D+</option>
+                    <option value="1.5">D</option>
+                    <option value="0.0">F</option>
+                </select>
+            </td>
+            <td><input type="number" class="form-control credit-hour" placeholder="عدد الساعات المعتمدة"></td>
+            <td><input type="text" class="form-control course-name" placeholder="المادة"></td>
+        </tr>
+    `;
+    document.querySelector('#degreeTable tbody').insertAdjacentHTML('beforeend', rowHTML);
+});
+
+function calculateCumulativeGPA() {
+    // Get current semester GPA calculation
+    const grades = document.querySelectorAll(".grade");
+    const creditHours = document.querySelectorAll(".credit-hour");
+    const retakenCourses = document.querySelectorAll(".retaken-course");
+    const retakenCodes = document.querySelectorAll(".retaken-code");
+
+    // Get old GPA and hours
+    const oldGPA = parseFloat(document.getElementById("old_gpa").value) || 0;
+    const oldHours = parseFloat(document.getElementById("old_hour").value) || 0;
+
+    // Calculate total points before retaking any courses
+    let totalPoints = oldGPA * oldHours;
+    let totalHours = oldHours;
+
+    // Object to track retaken courses
+    const retakenSubjects = {};
+
+    // Process current semester courses
+    grades.forEach((grade, index) => {
+        const courseName = document.querySelectorAll(".course-name")[index].value;
+        const hour = parseFloat(creditHours[index].value);
+        const gradeValue = parseFloat(grade.value);
+        const isRetaken = retakenCourses[index].checked;
+        const retakenCode = retakenCodes[index].value.trim();
+
+        // Validate input
+        if (!isNaN(gradeValue) && !isNaN(hour) && gradeValue >= 0 && hour > 0) {
+            if (isRetaken) {
+                // Handle retaken courses
+                if (!retakenSubjects[retakenCode]) {
+                    // First time encountering this retaken course
+                    retakenSubjects[retakenCode] = { 
+                        grade: gradeValue, 
+                        hours: hour,
+                        originallyTaken: true
+                    };
+                    
+                    // Subtract original course points if it was previously counted
+                    totalPoints -= (oldGPA * hour);
+                    totalHours -= hour;
+                    
+                    // Add new course points
+                    totalPoints += (gradeValue * hour);
+                    totalHours += hour;
+                } else {
+                    // Subsequent attempts at the same course
+                    if (gradeValue > retakenSubjects[retakenCode].grade) {
+                        // Replace with better grade
+                        const oldGradePoints = retakenSubjects[retakenCode].grade * retakenSubjects[retakenCode].hours;
+                        const newGradePoints = gradeValue * hour;
+                        
+                        // Update total points
+                        totalPoints = totalPoints - oldGradePoints + newGradePoints;
+                        
+                        // Update the retaken subject info
+                        retakenSubjects[retakenCode] = { 
+                            grade: gradeValue, 
+                            hours: hour,
+                            originallyTaken: true
+                        };
+                    }
+                }
+            } else {
+                // Regular course (not retaken)
+                if (!retakenSubjects[retakenCode]) {
+                    // Add points for new courses
+                    totalPoints += (gradeValue * hour);
+                    totalHours += hour;
+                }
+            }
+        }
+    });
+
+    // Calculate the cumulative GPA
+    const cumulativeGPA = totalHours > 0 ? (totalPoints / totalHours) : 0;
+
+    // Add grade description (Arabic)
+    let gradeDescription = "";
+    if (cumulativeGPA >= 3.5) {
+        gradeDescription = "ممتاز";
+    } else if (cumulativeGPA >= 3.0) {
+        gradeDescription = "جيد جدا";
+    } else if (cumulativeGPA >= 2.5) {
+        gradeDescription = "جيد";
+    } else {
+        gradeDescription = "مقبول";
+    }
+
+    // Display cumulative GPA and description
+    document.getElementById("gpatotal").value = `${cumulativeGPA.toFixed(2)} (${gradeDescription})`;
+}
+    </script>
+</body>
+
+</html>
