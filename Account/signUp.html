@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="img/logowhite.png" type="image/png"/>
+    <link rel="stylesheet" type="text/css" href="css/loginStyle.css">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  </head>
+  <body>
+    <div class="align">
+      <nav class="navbar">
+        <div class="logo">
+          <img src="img/logowhite.png" alt="Logo">
+        </div>
+        <div class="site-name">
+          <b>[ ITBook ] <br>
+          </b>
+          <text>It’s quick and easy.</text>
+        </div>
+      </nav>
+      <div>
+        <div>
+          <img src="img/collageblue.jpg" alt="IT collage" class="Background-image">
+        </div>
+        <div class="cardSignup">
+          <div class="head">
+            <div></div>
+            <a name="login" href="login.html">Login</a>
+            <a name="signUp" class="selected" href="signUp.html">Sign up</a>
+            <div></div>
+          </div>
+          <div>
+            <form class="formSignup" asp-action="Register" method="post" autocomplete="on">
+              <div asp-validation-summary="ModelOnly" class="validation"></div>
+              <div class="inputs">
+                <div class="input">
+                  <input asp-for="Email" placeholder="Email">
+                  <img src="img/icons/mail.svg">
+                  <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="input">
+                  <input asp-for="FullName" placeholder="Full Name">
+                  <img src="img/icons/user.svg">
+                  <span asp-validation-for="FullName" class="text-danger"></span>
+                </div>
+                <div class="input">
+                  <input type="date" asp-for="DateOfBirth" placeholder="Date Of Birth">
+                  <img src="img/icons/date.svg" alt="calendar icon">
+                  <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+                </div>
+                <div class="input">
+                  <input asp-for="PhoneNumber" placeholder="Phone Number">
+                  <img src="img/icons/phone.svg">
+                  <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                </div>
+                <div class="input">
+                  <select asp-for="Gender">
+                    <option value="" selected disabled>Select Gender</option>
+                    <option value="1">Male</option>
+                    <option value="2">Female</option>
+                  </select>
+                  <img src="img/icons/gender.png">
+                  <span asp-validation-for="Gender" class="text-danger"></span>
+                </div>
+                <div class="input">
+                  <input type="password" asp-for="Password" id="password" placeholder="Password">
+                  <img src="img/icons/pass.svg">
+                  <i class="fas fa-eye toggle-password" id="togglePassword"></i>
+                  <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="input">
+                  <input type="password" asp-for="ConfirmPassword" id="confirmPassword" placeholder="Confirm Password">
+                  <img src="img/icons/pass.svg">
+                  <i class="fas fa-eye toggle-password" id="toggleConfirmPassword"></i>
+                  <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                </div>
+                <br>
+              </div>
+              <input type="submit" value="Submit" style="margin-bottom:10px" />
+              <a href="index.html" class="ff" asp-controller="Home" asp-action="Index">Return To Home</a>
+            </form>
+          </div>
+        </div>
+        <script>
+          const togglePassword = document.querySelector('#togglePassword');
+          const password = document.querySelector('#password');
+          const toggleConfirmPassword = document.querySelector('#toggleConfirmPassword');
+          const confirmPassword = document.querySelector('#confirmPassword');
+          togglePassword.addEventListener('click', function() {
+            const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+            password.setAttribute('type', type);
+            this.classList.toggle('fa-eye-slash');
+          });
+          toggleConfirmPassword.addEventListener('click', function() {
+            const type = confirmPassword.getAttribute('type') === 'password' ? 'text' : 'password';
+            confirmPassword.setAttribute('type', type);
+            this.classList.toggle('fa-eye-slash');
+          });
+        </script>
+  </body>
+</html>
