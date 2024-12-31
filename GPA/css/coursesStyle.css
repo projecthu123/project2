@@ -1,6 +1,5 @@
-/********** Template CSS **********/
 :root {
-  --primary: #040610; /* #040610; or #181d38  or #011f4b */
+  --primary: #040610;
   --lighterprimary: #181d38;
   --light: #f0fbfc;
   --dark: #181d38;
@@ -157,16 +156,14 @@
 
 .btn:hover {
   background-color: white;
-  color:var(--primary);	
+  color: var(--primary);  
 }
 
 .course-card .btn {
   transition: background-color 0.3s ease;
 }
 
-
-
-/* FOOTER */
+/* Footer */
 .footer {
   background-color: var(--primary);
   color: var(--light);
@@ -200,11 +197,13 @@
   gap: 15px;
   font-size: 15px;
 }
+
 .footer-menu a {
   color: var(--light);
   text-decoration: none;
   transition: color 0.3s;
 }
+
 .footer-menu a:hover {
   color: #ffffff;
 }
@@ -222,11 +221,80 @@
   font-size: 14px;
   color: var(--light);
 }
+
 .copyright a {
   color: var(--light);
   text-decoration: none;
   padding: 0 5px;
 }
+
 .copyright a:hover {
   color: white;
 }
+
+:root {
+  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.selector-for-some-widget {
+  box-sizing: content-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+}
+
+input, select {
+  text-align: center;
+}
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+.card {
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1.5rem;
+        }
+
+        .table th {
+
+            padding: 1rem;
+            font-weight: 700;
+            text-align: center;
+            border-bottom: 2px solid var(#e5e7eb);
+        }
+
+        .table td {
+            padding: 0.75rem;
+            vertical-align: middle;
+            border-bottom: 1px solid var(#e5e7eb);
+        }
+/* Input and select styling */
+.form-control {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ced4da;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    transition: border-color 0.15s ease-in-out;
+}
+
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
