@@ -1,0 +1,522 @@
+/********** Template CSS **********/
+:root {
+  --primary: #050815; /* #040610; or #181d38  or #011f4b */
+  --lighterprimary: #040610;
+  --light: #f0fbfc;
+  --dark: #181d38;
+}
+
+.back-to-top {
+  position: fixed;
+  display: none;
+  right: 10px;
+  bottom: 45px;
+  z-index: 99;
+}
+
+/* Header styles */
+.image1 {
+  width: 70px;
+  padding-bottom: 6px;
+  padding-right: 4px;
+}
+
+.red {
+  color: red;
+}
+
+.user-image {
+  padding-right: 30px;
+}
+
+/* Navbar styles */
+
+.navbar-light .navbar-brand,
+.navbar-light a.btn {
+  height: 75px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: var(--dark);
+  font-weight: 500;
+}
+
+.user-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.user-dropdown-content a i {
+  margin-right: 0.5rem !important;
+}
+
+.user-dropdown-btn {
+  display: flex;
+  align-items: center;
+  background-color: var(--lighterprimary);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color var(--transition-speed) ease;
+}
+
+.user-dropdown-btn:hover {
+  background-color: #015080;
+}
+
+.user-dropdown-btn i {
+  margin-right: 10px;
+}
+
+.user-dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: white;
+  min-width: 200px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.user-dropdown:hover .user-dropdown-content {
+  display: block;
+  animation: dropdown-slide 0.3s ease;
+}
+
+.user-dropdown-content a {
+  color: var(--dark);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background-color var(--transition-speed) ease;
+}
+
+.user-dropdown-content a:hover {
+  background-color: var(--light);
+  color: var(--primary);
+}
+
+@keyframes dropdown-slide {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+  .user-dropdown-content {
+    position: static;
+    display: block;
+    box-shadow: none;
+    width: 100%;
+  }
+
+  .user-dropdown:hover .user-dropdown-content {
+    animation: none;
+  }
+}
+
+/* Page header background */
+.page-header {
+  background: linear-gradient(rgba(24, 29, 56, 0.7), rgba(24, 29, 56, 0.7)),
+    url(../img/collage.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.page-header-inner {
+  background: rgba(15, 23, 43, 0.7);
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  color: var(--light);
+}
+
+/* Courses section */
+.courses-section {
+  text-align: center;
+  padding: 70px;
+}
+.courses-section p,
+.submit-section input[type="submit"] {
+  font-family: "Candara Light";
+  margin-top: 5px;
+  font-size: 1.2em;
+}
+
+.resources-container {
+  display: flex;
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+@media (max-width: 1200px) {
+  .resources-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.resource-card {
+  flex: 1;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.resource-card:hover {
+  transform: translateY(-5px);
+}
+
+.resource-header {
+  background: var(--primary);
+  color: white;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.resource-header i {
+  font-size: 1.5rem;
+}
+
+.resource-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.resource-content {
+  aspect-ratio: 4/3;
+  padding: 1rem;
+}
+
+.resource-content iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 8px;
+  background-color: #1e1e1e; /* Dark background color */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Optional: for better emphasis */
+}
+
+
+.course-info {
+  margin-top: 10px;
+}
+.course-description {
+  color: #666;
+}
+img {
+  max-width: 100px;
+}
+.courses-section img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.courses-section {
+  padding: 4rem 5%;
+  background: #f4f6f7;
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.course-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  text-align: center;
+  height: 250px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+}
+
+.course-card img {
+  max-width: 120px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+  align-self: center;
+}
+
+.course-card img:hover {
+  transform: scale(1.1);
+}
+
+/* Button styling */
+.btn {
+  display: inline-block;
+  background-color: var(--lighterprimary);
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: auto;
+  transition: background-color 0.3s ease;
+  font-family: "Inter", sans-serif;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  background-color: white;
+}
+
+.course-card .btn {
+  transition: background-color 0.3s ease;
+}
+
+
+.container {
+  max-width: 800px;
+  margin: 0 auto 60px;
+  padding: 0 20px;
+}
+
+.pdf-chat-wrapper {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  margin: 2rem auto;
+}
+
+.pdf-chat-header {
+  background: var(--primary);
+  color: var(--light);
+  padding: 2rem;
+  text-align: center;
+}
+
+.pdf-chat-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+color: white;
+}
+
+.pdf-chat-header {
+  background: var(--primary);
+  color: var(--light);
+  padding: 2rem;
+  text-align: center;
+
+}
+
+.upload-form, .question-form {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.upload-form label, .question-form label {
+  display: block;
+  color: var(--primary);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.upload-form input[type="file"],
+.upload-form input[type="text"],
+.question-form input[type="text"] {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #eef2f7;
+  border-radius: 10px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.upload-form input[type="file"]:focus,
+.upload-form input[type="text"]:focus,
+.question-form input[type="text"]:focus {
+  border-color: var(--primary);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(4, 6, 16, 0.1);
+}
+
+/* Custom styling for file input */
+.upload-form input[type="file"] {
+  padding: 10px;
+  background-color: #f1f3f7;
+  color: #666;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  display: block;
+  margin-bottom: 20px;
+  width: 100%;
+  border: 2px dashed #ccc;
+  border-radius: 12px;
+
+}
+
+.upload-form input[type="file"]::-webkit-file-upload-button {
+  background: var(--primary);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.upload-form input[type="file"]:hover {
+  background-color: #1c2833;
+}
+
+.upload-form button,
+.question-form button {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.upload-form button:hover,
+.question-form button:hover {
+  background-color: var(--lighterprimary);
+  transform: translateY(-2px);
+}
+
+.response {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  margin-top: 25px;
+  color: var(--primary);
+  border-left: 4px solid var(--primary);
+  text-align: left;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .pdfchat-container {
+    padding: 25px 20px;
+  }
+
+  .pdfchat-container h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .upload-form, .question-form {
+    padding: 20px;
+  }
+}
+
+
+/* FOOTER */
+.footer {
+  background-color: var(--primary);
+  color: var(--light);
+  padding: 30px 0;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.social-icons .btn-social {
+  margin: 0 10px;
+  color: var(--light);
+  background-color: var(--primary);
+  border: 1px solid var(--light);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.social-icons .btn-social:hover {
+  color: var(--primary);
+  background-color: var(--light);
+}
+
+/* Footer Menu */
+.footer-menu {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  font-size: 15px;
+}
+.footer-menu a {
+  color: var(--light);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.footer-menu a:hover {
+  color: #ffffff;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Copyright Section */
+.copyright {
+  text-align: center;
+  font-size: 14px;
+  color: var(--light);
+}
+.copyright a {
+  color: var(--light);
+  text-decoration: none;
+  padding: 0 5px;
+}
+.copyright a:hover {
+  color: white;
+}
+
+
+
