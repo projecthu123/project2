@@ -1,0 +1,127 @@
+java1
+- https://drive.google.com/file/d/108QWXW9uObGsumGMZD-5wbWf5HKMK-3r/view
+- https://drive.google.com/file/d/108QWXW9uObGsumGMZD-5wbWf5HKMK-3r/preview
+- becomes:
+  - https://drive.google.com/drive/u/0/folders/1gMzAtt4HYXNZ5J6gyDWuedT--6sTpato
+  - https://drive.google.com/embeddedfolderview?id=1gMzAtt4HYXNZ5J6gyDWuedT--6sTpato#grid
+
+AI
+- https://drive.google.com/file/d/1BbD7fI1mR0d96I-mw8iHYLsap9bf9f1T/view
+- https://drive.google.com/drive/u/0/folders/19mzl7fPHsH-hFPQvRm3xroMxJ1vfQ-cT
+- becomes:
+  - https://drive.google.com/file/d/1BbD7fI1mR0d96I-mw8iHYLsap9bf9f1T/preview
+  - https://drive.google.com/embeddedfolderview?id=19mzl7fPHsH-hFPQvRm3xroMxJ1vfQ-cT#grid
+
+Algorithms
+- https://drive.google.com/file/d/1u2Bp_QwVd1ZKVSwGXMdk1jyfQ2e88z4Q/view
+- https://drive.google.com/drive/u/0/folders/1-uwZU3Q8nvwSorR-Vo_tC29t
+- becomes:
+  - https://drive.google.com/file/d/1u2Bp_QwVd1ZKVSwGXMdk1jyfQ2e88z4Q/preview
+  - https://drive.google.com/embeddedfolderview?id=1-uwZU3Q8nvwSorR-Vo_tC29t#grid
+
+-------------
+change a bit lab sheet, sol
+Lab C++
+- https://drive.google.com/file/d/1oynQA0lh5vwAu-a2TOeiXPKMXYU7NFfW/view
+- https://drive.google.com/file/d/1E6OMq-QIjdOGfH23qANWdZCCkbsY3pfb/view
+- becomes:
+  - https://drive.google.com/file/d/1oynQA0lh5vwAu-a2TOeiXPKMXYU7NFfW/preview
+  - https://drive.google.com/file/d/1E6OMq-QIjdOGfH23qANWdZCCkbsY3pfb/preview
+
+Lab Database
+- https://drive.google.com/file/d/1ctJmlIfBTvgARfSPtt1CnxIP2WjJIJ-5/view
+- https://drive.google.com/file/d/1YDEQKFpx1-04l_yg82UqG6tiIo3UevDd/view
+- becomes:
+  - https://drive.google.com/file/d/1ctJmlIfBTvgARfSPtt1CnxIP2WjJIJ-5/preview
+  - https://drive.google.com/file/d/1YDEQKFpx1-04l_yg82UqG6tiIo3UevDd/preview
+
+Lab Java 1
+- https://drive.google.com/file/d/1CSn1XbUNGVdf9YvWKd3h6KffQWmf1DzB/view
+- https://drive.google.com/file/d/1WNm73EXGR11G5V7ViOaCtcugqTR61QU5/view
+- becomes:
+  - https://drive.google.com/file/d/1CSn1XbUNGVdf9YvWKd3h6KffQWmf1DzB/preview
+  - https://drive.google.com/file/d/1WNm73EXGR11G5V7ViOaCtcugqTR61QU5/preview
+
+Lab Java 2
+- https://drive.google.com/file/d/11nQ8L2ZhqWQ8XY5pvZ6FibXf34qohVTq/view
+- https://drive.google.com/file/d/1vGvg5lqIxSHGRzFicb4MM2Z1Ibe_F_Eg/view
+- becomes:
+  - https://drive.google.com/file/d/11nQ8L2ZhqWQ8XY5pvZ6FibXf34qohVTq/preview
+  - https://drive.google.com/file/d/1vGvg5lqIxSHGRzFicb4MM2Z1Ibe_F_Eg/preview
+
+Lab VB
+- https://drive.google.com/file/d/1mKqm-qa3XHFSdgd5W-DxuaudqMrwonXY/view
+- https://drive.google.com/file/d/1N1KgcE_xCYFJTngYUvF0OGP823gt7flG/view
+- becomes:
+  - https://drive.google.com/file/d/1mKqm-qa3XHFSdgd5W-DxuaudqMrwonXY/preview
+  - https://drive.google.com/file/d/1N1KgcE_xCYFJTngYUvF0OGP823gt7flG/preview
+
+-------
+Logic
+- https://drive.google.com/file/d/18ki7qbtJRYuzKtgC6QW8P97ST3nq5OHL/view
+- https://drive.google.com/file/d/1OU9fRHjlCdE2O6RoSEqk0EL4xMa-0i7c/view
+- becomes:
+  - https://drive.google.com/file/d/18ki7qbtJRYuzKtgC6QW8P97ST3nq5OHL/preview
+  - https://drive.google.com/file/d/1OU9fRHjlCdE2O6RoSEqk0EL4xMa-0i7c/preview
+
+Network
+- https://drive.google.com/file/d/1qGwQr084Sw8HKkhVEMPI2C03F918xWHa/view
+- https://drive.google.com/drive/u/0/folders/1vK4cQ_RCbRi7SSVk8XXq-OFY0OUwEadb
+- becomes:
+  - https://drive.google.com/file/d/1qGwQr084Sw8HKkhVEMPI2C03F918xWHa/preview
+  - https://drive.google.com/embeddedfolderview?id=1vK4cQ_RCbRi7SSVk8XXq-OFY0OUwEadb#grid
+
+ORG
+- https://drive.google.com/file/d/1GDe8YThN6oX0AkcHA3ecGlUwz4TU7JXL/view
+- https://drive.google.com/drive/u/0/folders/1NIhn5CIXQn1MC-HZGHjyNQbJb1V8cBzw
+- becomes:
+  - https://drive.google.com/file/d/1GDe8YThN6oX0AkcHA3ecGlUwz4TU7JXL/preview
+  - https://drive.google.com/embeddedfolderview?id=1NIhn5CIXQn1MC-HZGHjyNQbJb1V8cBzw#grid
+
+OS
+- https://drive.google.com/file/d/1kmC233Nruioqj58GjvonY-EHdErVXAsl/view
+- https://drive.google.com/drive/u/0/folders/1ouyQ82me9a1Yw8Oqg6LsAumDh6GPC8h4
+- becomes:
+  - https://drive.google.com/file/d/1kmC233Nruioqj58GjvonY-EHdErVXAsl/preview
+  - https://drive.google.com/embeddedfolderview?id=1ouyQ82me9a1Yw8Oqg6LsAumDh6GPC8h4#grid
+
+Parallel
+- https://drive.google.com/file/d/1xfHSCRAHL0eWvVF1uvPYyoF62gdZT89f/view
+- https://drive.google.com/drive/u/0/folders/19rotM8HaH9n333S2DqGy_Zzsn_jK8ALR
+- becomes:
+  - https://drive.google.com/file/d/1xfHSCRAHL0eWvVF1uvPYyoF62gdZT89f/preview
+  - https://drive.google.com/embeddedfolderview?id=19rotM8HaH9n333S2DqGy_Zzsn_jK8ALR#grid
+
+Securitycis
+- https://drive.google.com/file/d/17TUqCoONRkA9UG8BQSuUDtj8_g44XHXB/view
+- https://drive.google.com/drive/u/0/folders/1Bomst3lRC8KhFfnEfsMvoep9wlJ6E9pN
+- becomes:
+  - https://drive.google.com/file/d/17TUqCoONRkA9UG8BQSuUDtj8_g44XHXB/preview
+
+Software
+https://drive.google.com/file/d/1Z7OGIjdfPJ0prPZtFiyrRcTMsfnOSB2W/view
+https://drive.google.com/drive/u/0/folders/1fYlhKlBCIKE-f7YEFI47S4mRXm2bsB0O
+becomes
+https://drive.google.com/file/d/1Z7OGIjdfPJ0prPZtFiyrRcTMsfnOSB2W/preview
+https://drive.google.com/embeddedfolderview?id=1fYlhKlBCIKE-f7YEFI47S4mRXm2bsB0O#grid
+
+Theory
+https://drive.google.com/file/d/1UUPF9nNtTfZDZpP_2t1QeP7IsPMr_Coz/view
+https://drive.google.com/drive/u/0/folders/1WT___BOZ36Yfla-c1HmX9AcUsLMVpw5-
+becomes
+https://drive.google.com/file/d/1UUPF9nNtTfZDZpP_2t1QeP7IsPMr_Coz/preview
+https://drive.google.com/embeddedfolderview?id=1WT___BOZ36Yfla-c1HmX9AcUsLMVpw5-#grid
+
+VB
+https://drive.google.com/file/d/1kIbl3ut5G4x87U7L0l2IugYsKS8Zxin1/view
+https://drive.google.com/drive/u/0/folders/1y2POrD68nQ8ApcPu36_LNS_gr5JLVke6
+becomes
+https://drive.google.com/file/d/1kIbl3ut5G4x87U7L0l2IugYsKS8Zxin1/preview
+https://drive.google.com/embeddedfolderview?id=1y2POrD68nQ8ApcPu36_LNS_gr5JLVke6#grid
+
+Web
+https://drive.google.com/file/d/1YRiuWserAEpwGuZOy4XlwzSMuQJFH2vm/view
+https://drive.google.com/drive/u/0/folders/1Sho2bm6G4r7GjmZdNuXXkcXGYTx32g2A
+becomes
+https://drive.google.com/file/d/1YRiuWserAEpwGuZOy4XlwzSMuQJFH2vm/preview
+https://drive.google.com/embeddedfolderview?id=1Sho2bm6G4r7GjmZdNuXXkcXGYTx32g2A#grid
