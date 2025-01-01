@@ -1,6 +1,6 @@
 java1
-- https://drive.google.com/file/d/108QWXW9uObGsumGMZD-5wbWf5HKMK-3r/view
-- https://drive.google.com/file/d/108QWXW9uObGsumGMZD-5wbWf5HKMK-3r/preview
+- 
+- 
 - becomes:
   - https://drive.google.com/drive/u/0/folders/1gMzAtt4HYXNZ5J6gyDWuedT--6sTpato
   - https://drive.google.com/embeddedfolderview?id=1gMzAtt4HYXNZ5J6gyDWuedT--6sTpato#grid
