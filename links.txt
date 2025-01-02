@@ -97,6 +97,7 @@ Securitycis
 - https://drive.google.com/drive/u/0/folders/1Bomst3lRC8KhFfnEfsMvoep9wlJ6E9pN
 - becomes:
   - https://drive.google.com/file/d/17TUqCoONRkA9UG8BQSuUDtj8_g44XHXB/preview
+  - https://drive.google.com/embeddedfolderview?id=1Bomst3lRC8KhFfnEfsMvoep9wlJ6E9pN#grid
 
 Software
 https://drive.google.com/file/d/1Z7OGIjdfPJ0prPZtFiyrRcTMsfnOSB2W/view
